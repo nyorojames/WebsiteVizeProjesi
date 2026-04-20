@@ -1,0 +1,1425 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yazılım Mühendisliği – Samsun Üniversitesi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- ══ NAVIGATION ══ -->
+    <header>
+      <nav id="site-nav" aria-label="Ana navigasyon">
+        <a
+          class="nav-brand"
+          onclick="showPage('home', document.querySelector('.nav-list a'))"
+        >
+          <div class="nav-logo" aria-hidden="true">YM</div>
+          <div class="nav-brand-name">
+            Yazılım Mühendisliği
+            <small>Samsun Üniversitesi</small>
+          </div>
+        </a>
+        <ul class="nav-list" role="list">
+          <li>
+            <a onclick="showPage('home', this)" class="active">Anasayfa</a>
+          </li>
+          <li><a onclick="showPage('about', this)">Bölüm Hakkında</a></li>
+          <li><a onclick="showPage('programs', this)">Eğitim</a></li>
+          <li><a onclick="showPage('erasmus', this)">Erasmus</a></li>
+          <li><a onclick="showPage('internship', this)">Staj</a></li>
+          <li><a onclick="showPage('double', this)">ÇAP</a></li>
+          <li><a onclick="showPage('research', this)">Araştırma</a></li>
+          <li><a onclick="showPage('student', this)">Öğrenci Hayatı</a></li>
+          <li><a onclick="showPage('campuses', this)">Kampüsler</a></li>
+          <li><a onclick="showPage('contact', this)">İletişim</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- ══════════════════════════════
+         1. ANASAYFA
+    ══════════════════════════════ -->
+      <section id="home" class="page active" aria-label="Anasayfa">
+        <section class="hero" aria-label="Tanıtım hero">
+          <div class="hero-dots" aria-hidden="true"></div>
+          <div
+            class="hero-photo"
+            role="img"
+            aria-label="Bir yazılım mühendisi dizüstü bilgisayarında kod yazıyor"
+          ></div>
+
+          <div class="hero-content">
+            <p class="hero-badge">
+              <span class="pulse" aria-hidden="true"></span>
+              <span>2025–2026 Eğitim Öğretim Yılı — Kayıtlar Açık</span>
+            </p>
+            <h1>Yazılımı<em>Mühendisliğe</em>Dönüştür.</h1>
+            <p class="hero-desc">
+              Samsun Üniversitesi Yazılım Mühendisliği Bölümü; ISO/IEEE
+              standartlarında yazılım geliştirme, sistem tasarımı ve mühendislik
+              pratiğiyle mezunlarını endüstriye hazırlıyor.
+            </p>
+            <div class="hero-cta">
+              <button class="btn-primary" onclick="showPage('programs', null)">
+                Müfredatı İncele
+              </button>
+              <button class="btn-ghost" onclick="showPage('about', null)">
+                Bölümü Tanı
+              </button>
+            </div>
+            <div class="hero-stats" aria-label="Program istatistikleri">
+              <div class="hero-stat">
+                <strong class="stat-num">60+</strong>
+                <p class="stat-lbl">Kontenjan / Yıl</p>
+              </div>
+              <div class="hero-stat">
+                <strong class="stat-num">34+</strong>
+                <p class="stat-lbl">Staj Ortağı</p>
+              </div>
+              <div class="hero-stat">
+                <strong class="stat-num">12</strong>
+                <p class="stat-lbl">Erasmus Üniversitesi</p>
+              </div>
+              <div class="hero-stat">
+                <strong class="stat-num">%91</strong>
+                <p class="stat-lbl">İstihdam Oranı</p>
+              </div>
+            </div>
+          </div>
+
+          <aside class="code-card" aria-label="Örnek C# kod parçacığı">
+            <div class="code-card-bar" aria-hidden="true">
+              <span class="code-dot" style="background: #ff5f57"></span>
+              <span class="code-dot" style="background: #ffbd2e"></span>
+              <span class="code-dot" style="background: #28c840"></span>
+              <span class="code-filename">Program.cs</span>
+            </div>
+            <pre
+              class="code-body"
+            ><span class="cm">// Samsun Üniversitesi YM</span>
+<span class="kw">namespace</span> <span class="acc">YazılımMüh</span>
+{
+ <span class="kw">public class</span> <span class="fn">Mezun</span>
+ {
+  <span class="kw">public string</span> Kariyer
+    = <span class="str">"Yazılım Müh."</span>;
+
+  <span class="kw">public bool</span> Hazır
+    = <span class="num">true</span>;<span class="cursor"></span>
+ }
+}</pre>
+          </aside>
+        </section>
+
+        <section class="news-wrapper" aria-label="Son haberler">
+          <div class="wrap">
+            <header class="news-header">
+              <div>
+                <span class="lbl">Son Haberler</span>
+                <h2 class="h2">Bölümden Gelişmeler</h2>
+              </div>
+              <a class="news-all" onclick="showPage('research', null)"
+                >Tümünü Gör →</a
+              >
+            </header>
+
+            <ul class="news-grid" role="list">
+              <li class="news-card">
+                <div class="news-meta">
+                  <time class="news-date" datetime="2025-06-12"
+                    >12 Haz 2025</time
+                  >
+                  <span class="chip chip-blue">ETKİNLİK</span>
+                </div>
+                <h3>Bahar Hackathon Kazananları Belli Oldu</h3>
+                <p>
+                  Team Nullify, ASP.NET Core ve Azure üzerinde gerçek zamanlı
+                  ulaşım anomali dedektörüyle birincilik elde etti.
+                </p>
+                <span class="news-link">Devamını oku →</span>
+              </li>
+              <li class="news-card">
+                <div class="news-meta">
+                  <time class="news-date" datetime="2025-04-08"
+                    >08 Nis 2025</time
+                  >
+                  <span class="chip chip-amber">ÖDÜL</span>
+                </div>
+                <h3>TÜBİTAK 2209 Projelerinde Önemli Başarı</h3>
+                <p>
+                  Bölümümüz öğrencileri 2024 yılı TÜBİTAK Öğrenci Projeleri
+                  Destekleme Programı'nda üst sıralarda yer aldı.
+                </p>
+                <span class="news-link">Devamını oku →</span>
+              </li>
+              <li class="news-card">
+                <div class="news-meta">
+                  <time class="news-date" datetime="2025-05-29"
+                    >29 May 2025</time
+                  >
+                  <span class="chip chip-green">ORTAKLIK</span>
+                </div>
+                <h3>Netaş ile Yeni Staj Protokolü İmzalandı</h3>
+                <p>
+                  Staj kapasitesini artıran ve ortak bitirme projesi izlerini
+                  hayata geçiren yeni MoU belgesi yürürlüğe girdi.
+                </p>
+                <span class="news-link">Devamını oku →</span>
+              </li>
+            </ul>
+
+            <nav class="quickbar" aria-label="Hızlı bölüm navigasyonu">
+              <a class="quickbar-item" onclick="showPage('programs', null)"
+                ><span class="qb-icon" aria-hidden="true">YM</span>Ders
+                Programı</a
+              >
+              <a class="quickbar-item" onclick="showPage('erasmus', null)"
+                ><span class="qb-icon" aria-hidden="true">EU</span>Erasmus</a
+              >
+              <a class="quickbar-item" onclick="showPage('internship', null)"
+                ><span class="qb-icon" aria-hidden="true">ST</span>Staj
+                Bilgileri</a
+              >
+              <a class="quickbar-item" onclick="showPage('double', null)"
+                ><span class="qb-icon" aria-hidden="true">ÇP</span>Çift
+                Anadal</a
+              >
+              <a class="quickbar-item" onclick="showPage('research', null)"
+                ><span class="qb-icon" aria-hidden="true">AR</span>Araştırma</a
+              >
+              <a class="quickbar-item" onclick="showPage('contact', null)"
+                ><span class="qb-icon" aria-hidden="true">İL</span>İletişim</a
+              >
+            </nav>
+          </div>
+        </section>
+      </section>
+
+      <!-- ══════════════════════════════
+         2. BÖLÜM HAKKINDA
+    ══════════════════════════════ -->
+      <article id="about" class="page" aria-label="Bölüm hakkında">
+        <div class="wrap sec">
+          <div class="about-grid">
+            <div>
+              <span class="lbl">Bölüm Hakkında</span>
+              <h1 class="h1">Yazılım Mühendisliği Bölümü</h1>
+              <p>
+                Yazılım Mühendisliği; yazılımın tasarımı, projelendirilmesi,
+                geliştirilmesi, üretilmesi, işletilmesi ve bakımıyla ilgili tüm
+                çalışmaları kapsayan mühendislik disiplinidir.
+              </p>
+              <p style="margin-top: 10px">
+                ISO ve IEEE standartlarına dayalı öğretim programıyla, yazılım
+                sektörünün gerektirdiği koşullarda liderlik yapabilecek ve
+                teknolojiye katkıda bulunacak mühendisler yetiştiriyoruz.
+              </p>
+
+              <blockquote class="vision">
+                "Teknolojideki gelişmelere katkıda bulunacak, akademik alanda ve
+                yazılım endüstrisinin tüm sektörlerinde öncülük edecek
+                mühendisler yetiştirmek."
+              </blockquote>
+
+              <ul class="val-list" role="list">
+                <li class="val-row">
+                  <span class="val-num" aria-hidden="true">01</span>
+                  <div>
+                    <strong class="val-title">Mühendislik Disiplini</strong>
+                    <p class="val-desc">
+                      ISO/IEEE standartlarını esas alan, endüstri pratikleriyle
+                      beslenmiş sıkı bir mühendislik eğitimi.
+                    </p>
+                  </div>
+                </li>
+                <li class="val-row">
+                  <span class="val-num" aria-hidden="true">02</span>
+                  <div>
+                    <strong class="val-title">Araştırma Kültürü</strong>
+                    <p class="val-desc">
+                      TÜBİTAK projeleri ve uluslararası yayınlarla desteklenen
+                      güçlü araştırma altyapısı.
+                    </p>
+                  </div>
+                </li>
+                <li class="val-row">
+                  <span class="val-num" aria-hidden="true">03</span>
+                  <div>
+                    <strong class="val-title">Sosyal Gelişim</strong>
+                    <p class="val-desc">
+                      GDG, kulüp etkinlikleri, müzik, spor ve tiyatroyla
+                      desteklenen kişisel beceri gelişimi.
+                    </p>
+                  </div>
+                </li>
+                <li class="val-row">
+                  <span class="val-num" aria-hidden="true">04</span>
+                  <div>
+                    <strong class="val-title">Küresel Bakış Açısı</strong>
+                    <p class="val-desc">
+                      Erasmus+ hareketliliği ve uluslararası proje
+                      ortaklıklarıyla geniş bir dünya görüşü.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="about-img-wrap">
+                <figure class="about-img-main">
+                  <img
+                    src="https://images.unsplash.com/photo-1522071820081-009f0129c71c"
+                    alt="Yazılım mühendisliği öğrencileri masada dizüstü bilgisayarlarıyla birlikte proje geliştiriyor"
+                  />
+                </figure>
+                <div class="about-badge">
+                  <p class="about-badge-val">MÜDEK</p>
+                  <p class="about-badge-lbl">Akredite Program</p>
+                </div>
+              </div>
+              <div class="about-info-grid">
+                <article class="card info-cell">
+                  <span class="lbl">Öğretim Dili</span>
+                  <p class="info-cell-val">Türkçe</p>
+                  <p class="info-cell-sub">Lisans &amp; Yüksek Lisans</p>
+                </article>
+                <article class="card info-cell">
+                  <span class="lbl">Standartlar</span>
+                  <p class="info-cell-val">ISO / IEEE</p>
+                  <p class="info-cell-sub">Uluslararası Müfredat</p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- ══════════════════════════════
+         3. EĞİTİM PROGRAMLARI
+    ══════════════════════════════ -->
+      <section id="programs" class="page" aria-label="Eğitim programları">
+        <div class="wrap sec" style="padding-bottom: 0">
+          <span class="lbl">Müfredat</span>
+          <h1 class="h1">Eğitim Programları</h1>
+          <p class="sub">İki akademik iz, tek mühendislik standardı.</p>
+        </div>
+
+        <div class="prog-toggle">
+          <div
+            class="toggle-group"
+            role="group"
+            aria-label="Program türü seçimi"
+          >
+            <button
+              class="toggle-btn active"
+              onclick="switchTrack('lisans', this)"
+            >
+              Lisans
+            </button>
+            <button
+              class="toggle-btn"
+              onclick="switchTrack('lisansustu', this)"
+            >
+              Yüksek Lisans
+            </button>
+          </div>
+        </div>
+
+        <div class="wrap" style="padding-bottom: 80px">
+          <section id="lisans" class="track-panel" aria-label="Lisans programı">
+            <div class="meta-strip" role="list">
+              <div class="meta-cell" role="listitem">
+                <p class="meta-label">Süre</p>
+                <p class="meta-value">4 Yıl / 8 Dönem</p>
+              </div>
+              <div class="meta-cell" role="listitem">
+                <p class="meta-label">Derece</p>
+                <p class="meta-value">Lisans (B.Sc.)</p>
+              </div>
+              <div class="meta-cell" role="listitem">
+                <p class="meta-label">AKTS</p>
+                <p class="meta-value">240</p>
+              </div>
+              <div class="meta-cell" role="listitem">
+                <p class="meta-label">Dil</p>
+                <p class="meta-value">Türkçe</p>
+              </div>
+              <div class="meta-cell" role="listitem">
+                <p class="meta-label">Kontenjan</p>
+                <p class="meta-value">60 Öğrenci</p>
+              </div>
+            </div>
+            <ul class="acc-list" role="list">
+              <li
+                class="acc-item"
+                data-courses="Matematik I, Fizik I, Algoritma ve Programlamaya Giriş (C), Bilgisayar Mühendisliğine Giriş, Mesleki İngilizce I, Türk Dili I"
+              >
+                <button
+                  class="acc-header"
+                  onclick="toggleAccordion(this)"
+                  aria-expanded="false"
+                >
+                  <span class="acc-semester">YIL 1 · GÜZ</span
+                  ><span class="acc-title">1. Dönem</span
+                  ><span class="acc-credits">30 AKTS</span
+                  ><svg
+                    class="acc-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    aria-hidden="true"
+                  >
+                    <line x1="12" y1="5" x2="12" y2="19" />
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                  </svg>
+                </button>
+                <div class="acc-body"></div>
+              </li>
+              <li
+                class="acc-item"
+                data-courses="Matematik II, Fizik II, Nesne Yönelimli Programlama (Java), Veri Yapıları, Olasılık ve İstatistik, Türk Dili II"
+              >
+                <button
+                  class="acc-header"
+                  onclick="toggleAccordion(this)"
+                  aria-expanded="false"
+                >
+                  <span class="acc-semester">YIL 1 · BAHAR</span
+                  ><span class="acc-title">2. Dönem</span
+                  ><span class="acc-credits">30 AKTS</span
+                  ><svg
+                    class="acc-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    aria-hidden="true"
+                  >
+                    <line x1="12" y1="5" x2="12" y2="19" />
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                  </svg>
+                </button>
+                <div class="acc-body"></div>
+              </li>
+              <li
+                class="acc-item"
+                data-courses="Algoritmalar ve Karmaşıklık, Veritabanı Yönetim Sistemleri, Bilgisayar Örgütlenmesi, Web Programlama Temelleri, Sayısal Yöntemler, Seçmeli I"
+              >
+                <button
+                  class="acc-header"
+                  onclick="toggleAccordion(this)"
+                  aria-expanded="false"
+                >
+                  <span class="acc-semester">YIL 2 · GÜZ</span
+                  ><span class="acc-title">3. Dönem</span
+                  ><span class="acc-credits">30 AKTS</span
+                  ><svg
+                    class="acc-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    aria-hidden="true"
+                  >
+                    <line x1="12" y1="5" x2="12" y2="19" />
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                  </svg>
+                </button>
+                <div class="acc-body"></div>
+              </li>
+              <li
+                class="acc-item"
+                data-courses="İşletim Sistemleri, Yazılım Mühendisliğine Giriş, Bilgisayar Ağları, .NET ile Backend Mimarisi, Ayrık Matematik, Seçmeli II"
+              >
+                <button
+                  class="acc-header"
+                  onclick="toggleAccordion(this)"
+                  aria-expanded="false"
+                >
+                  <span class="acc-semester">YIL 2 · BAHAR</span
+                  ><span class="acc-title">4. Dönem</span
+                  ><span class="acc-credits">30 AKTS</span
+                  ><svg
+                    class="acc-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    aria-hidden="true"
+                  >
+                    <line x1="12" y1="5" x2="12" y2="19" />
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                  </svg>
+                </button>
+                <div class="acc-body"></div>
+              </li>
+              <li
+                class="acc-item"
+                data-courses="Veri Analitiği ve Görselleştirme, Makine Öğrenmesi Temelleri, Mobil Uygulama Geliştirme, Yazılım Test ve Kalite Güvence, Dağıtık Sistemler, Seçmeli III"
+              >
+                <button
+                  class="acc-header"
+                  onclick="toggleAccordion(this)"
+                  aria-expanded="false"
+                >
+                  <span class="acc-semester">YIL 3 · GÜZ</span
+                  ><span class="acc-title">5. Dönem</span
+                  ><span class="acc-credits">30 AKTS</span
+                  ><svg
+                    class="acc-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    aria-hidden="true"
+                  >
+                    <line x1="12" y1="5" x2="12" y2="19" />
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                  </svg>
+                </button>
+                <div class="acc-body"></div>
+              </li>
+              <li
+                class="acc-item"
+                data-courses="Bulut Bilişim ve DevOps, Siber Güvenlik Temelleri, Doğal Dil İşleme, Sistem Tasarımı ve Mimari, Teknik Araştırma Yöntemleri, Seçmeli IV"
+              >
+                <button
+                  class="acc-header"
+                  onclick="toggleAccordion(this)"
+                  aria-expanded="false"
+                >
+                  <span class="acc-semester">YIL 3 · BAHAR</span
+                  ><span class="acc-title">6. Dönem</span
+                  ><span class="acc-credits">30 AKTS</span
+                  ><svg
+                    class="acc-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    aria-hidden="true"
+                  >
+                    <line x1="12" y1="5" x2="12" y2="19" />
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                  </svg>
+                </button>
+                <div class="acc-body"></div>
+              </li>
+              <li
+                class="acc-item"
+                data-courses="Bitirme Projesi I, Yaz Stajı (Endüstri Yerleşimi), Mesleki Etik, Seçmeli V, Seçmeli VI"
+              >
+                <button
+                  class="acc-header"
+                  onclick="toggleAccordion(this)"
+                  aria-expanded="false"
+                >
+                  <span class="acc-semester">YIL 4 · GÜZ</span
+                  ><span class="acc-title">7. Dönem</span
+                  ><span class="acc-credits">30 AKTS</span
+                  ><svg
+                    class="acc-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    aria-hidden="true"
+                  >
+                    <line x1="12" y1="5" x2="12" y2="19" />
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                  </svg>
+                </button>
+                <div class="acc-body"></div>
+              </li>
+              <li
+                class="acc-item"
+                data-courses="Bitirme Projesi II (Final Savunması), Girişimcilik ve Startup, Endüstri Seminerleri, Seçmeli VII"
+              >
+                <button
+                  class="acc-header"
+                  onclick="toggleAccordion(this)"
+                  aria-expanded="false"
+                >
+                  <span class="acc-semester">YIL 4 · BAHAR</span
+                  ><span class="acc-title">8. Dönem</span
+                  ><span class="acc-credits">30 AKTS</span
+                  ><svg
+                    class="acc-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    aria-hidden="true"
+                  >
+                    <line x1="12" y1="5" x2="12" y2="19" />
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                  </svg>
+                </button>
+                <div class="acc-body"></div>
+              </li>
+            </ul>
+          </section>
+
+          <section
+            id="lisansustu"
+            class="track-panel"
+            aria-label="Yüksek lisans programı"
+            hidden
+          >
+            <div class="meta-strip" role="list">
+              <div class="meta-cell" role="listitem">
+                <p class="meta-label">Süre</p>
+                <p class="meta-value">2 Yıl / 4 Dönem</p>
+              </div>
+              <div class="meta-cell" role="listitem">
+                <p class="meta-label">Derece</p>
+                <p class="meta-value">M.Sc. (Tezli)</p>
+              </div>
+              <div class="meta-cell" role="listitem">
+                <p class="meta-label">AKTS</p>
+                <p class="meta-value">120</p>
+              </div>
+              <div class="meta-cell" role="listitem">
+                <p class="meta-label">Dil</p>
+                <p class="meta-value">Türkçe</p>
+              </div>
+              <div class="meta-cell" role="listitem">
+                <p class="meta-label">Tez</p>
+                <p class="meta-value">Zorunlu</p>
+              </div>
+            </div>
+            <ul class="acc-list" role="list">
+              <li
+                class="acc-item"
+                data-courses="İleri Algoritmalar, Araştırma Metodolojisi, Uzmanlık Alanı Seçmeli I, Lisansüstü Semineri I"
+              >
+                <button
+                  class="acc-header"
+                  onclick="toggleAccordion(this)"
+                  aria-expanded="false"
+                >
+                  <span class="acc-semester">YIL 1 · GÜZ</span
+                  ><span class="acc-title">1. Dönem</span
+                  ><span class="acc-credits">30 AKTS</span
+                  ><svg
+                    class="acc-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    aria-hidden="true"
+                  >
+                    <line x1="12" y1="5" x2="12" y2="19" />
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                  </svg>
+                </button>
+                <div class="acc-body"></div>
+              </li>
+              <li
+                class="acc-item"
+                data-courses="Derin Öğrenme ve Sinir Ağı Mimarileri, İleri Veri Analitiği, Uzmanlık Alanı Seçmeli II, Tez Öneri Savunması"
+              >
+                <button
+                  class="acc-header"
+                  onclick="toggleAccordion(this)"
+                  aria-expanded="false"
+                >
+                  <span class="acc-semester">YIL 1 · BAHAR</span
+                  ><span class="acc-title">2. Dönem</span
+                  ><span class="acc-credits">30 AKTS</span
+                  ><svg
+                    class="acc-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    aria-hidden="true"
+                  >
+                    <line x1="12" y1="5" x2="12" y2="19" />
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                  </svg>
+                </button>
+                <div class="acc-body"></div>
+              </li>
+              <li
+                class="acc-item"
+                data-courses="Tez Araştırması I, İleri Dağıtık Sistemler, Seçmeli I, Yayın Atölyesi"
+              >
+                <button
+                  class="acc-header"
+                  onclick="toggleAccordion(this)"
+                  aria-expanded="false"
+                >
+                  <span class="acc-semester">YIL 2 · GÜZ</span
+                  ><span class="acc-title">3. Dönem</span
+                  ><span class="acc-credits">30 AKTS</span
+                  ><svg
+                    class="acc-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    aria-hidden="true"
+                  >
+                    <line x1="12" y1="5" x2="12" y2="19" />
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                  </svg>
+                </button>
+                <div class="acc-body"></div>
+              </li>
+              <li
+                class="acc-item"
+                data-courses="Tez Araştırması II ve Final Savunması, Endüstri İşbirliği Projesi, Seçmeli II"
+              >
+                <button
+                  class="acc-header"
+                  onclick="toggleAccordion(this)"
+                  aria-expanded="false"
+                >
+                  <span class="acc-semester">YIL 2 · BAHAR</span
+                  ><span class="acc-title">4. Dönem</span
+                  ><span class="acc-credits">30 AKTS</span
+                  ><svg
+                    class="acc-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    aria-hidden="true"
+                  >
+                    <line x1="12" y1="5" x2="12" y2="19" />
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                  </svg>
+                </button>
+                <div class="acc-body"></div>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════
+         4. ERASMUS
+    ══════════════════════════════ -->
+      <section id="erasmus" class="page" aria-label="Erasmus programı">
+        <div class="wrap sec">
+          <span class="lbl">Uluslararası Hareketlilik</span>
+
+          <figure class="page-hero-img era-img">
+            <img
+              src="https://images.unsplash.com/photo-1758270705172-07b53627dfcb"
+              alt="Bir dizüstü bilgisayarın etrafında toplanmış çeşitli öğrenci grubu"
+            />
+            <figcaption>Erasmus+ Öğrenci Hareketliliği</figcaption>
+          </figure>
+
+          <div class="erasmus-cols">
+            <aside class="erasmus-sidebar">
+              <div class="card">
+                <span class="lbl" style="margin-bottom: 14px"
+                  >Program Bilgileri</span
+                >
+                <dl>
+                  <div class="era-kv">
+                    <dt class="era-key">Min. GPA</dt>
+                    <dd class="era-val">2.75 / 4.00</dd>
+                  </div>
+                  <div class="era-kv">
+                    <dt class="era-key">Son Başvuru</dt>
+                    <dd
+                      class="era-val"
+                      style="color: var(--accent); font-family: var(--mono)"
+                    >
+                      15 Mart 2026
+                    </dd>
+                  </div>
+                  <div class="era-kv">
+                    <dt class="era-key">Süre</dt>
+                    <dd class="era-val">1 Akademik Dönem</dd>
+                  </div>
+                  <div class="era-kv">
+                    <dt class="era-key">Dil Şartı</dt>
+                    <dd class="era-val">B2 İngilizce</dd>
+                  </div>
+                  <div class="era-kv">
+                    <dt class="era-key">Burs</dt>
+                    <dd class="era-val">AB Aylık Hibesi</dd>
+                  </div>
+                  <div class="era-kv">
+                    <dt class="era-key">Toplam Kota</dt>
+                    <dd class="era-val">12 Öğrenci</dd>
+                  </div>
+                </dl>
+              </div>
+            </aside>
+
+            <div>
+              <span class="lbl" style="margin-bottom: 18px"
+                >Başvuru Süreci</span
+              >
+              <ol class="timeline" role="list">
+                <li class="timeline-step">
+                  <div class="timeline-dot done" aria-hidden="true"></div>
+                  <h3>Uygunluk Kontrolü</h3>
+                  <p>
+                    Min. 2.75 GPA, en az 2 sömestr tamamlanmış, disiplin kaydı
+                    temiz.
+                  </p>
+                </li>
+                <li class="timeline-step">
+                  <div class="timeline-dot done" aria-hidden="true"></div>
+                  <h3>Dil Belgesi</h3>
+                  <p>
+                    Geçerli B2+ İngilizce belgesi (IELTS, TOEFL veya bölüm
+                    sınavı).
+                  </p>
+                </li>
+                <li class="timeline-step">
+                  <div class="timeline-dot" aria-hidden="true"></div>
+                  <h3>Başvuru Paketi</h3>
+                  <p>
+                    Transkript, niyet mektubu (max 500 kelime), iki akademik
+                    referans.
+                  </p>
+                  <p class="timeline-date">Son Tarih: 15 Mart 2026</p>
+                </li>
+                <li class="timeline-step">
+                  <div class="timeline-dot" aria-hidden="true"></div>
+                  <h3>Öğrenim Anlaşması</h3>
+                  <p>
+                    Akademik danışmanla ders eşleştirmesi. Ayrılmadan önce
+                    imzalanması zorunludur.
+                  </p>
+                </li>
+                <li class="timeline-step">
+                  <div class="timeline-dot" aria-hidden="true"></div>
+                  <h3>Hareketlilik &amp; Dönüş</h3>
+                  <p>
+                    5. veya 6. Sömestr tercih edilir. Krediler dönüşten 4 hafta
+                    içinde aktarılır.
+                  </p>
+                </li>
+              </ol>
+            </div>
+          </div>
+
+          <section style="margin-top: 52px" aria-label="Ortak üniversiteler">
+            <h2 class="h2">Ortak Üniversiteler</h2>
+            <table class="uni-table">
+              <thead>
+                <tr>
+                  <th scope="col">Üniversite</th>
+                  <th scope="col">Ülke</th>
+                  <th scope="col">Kota</th>
+                  <th scope="col">Süre</th>
+                  <th scope="col">Son Tarih</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>TU Vienna</td>
+                  <td>
+                    <abbr class="country-code" title="Avusturya">AT</abbr>
+                  </td>
+                  <td>2 öğrenci</td>
+                  <td>1 dönem</td>
+                  <td class="deadline">15 Mar</td>
+                </tr>
+                <tr>
+                  <td>KTH Royal Institute of Technology</td>
+                  <td><abbr class="country-code" title="İsveç">SE</abbr></td>
+                  <td>2 öğrenci</td>
+                  <td>1 dönem</td>
+                  <td class="deadline">15 Mar</td>
+                </tr>
+                <tr>
+                  <td>Politecnico di Milano</td>
+                  <td><abbr class="country-code" title="İtalya">IT</abbr></td>
+                  <td>3 öğrenci</td>
+                  <td>1 dönem</td>
+                  <td class="deadline">15 Mar</td>
+                </tr>
+                <tr>
+                  <td>Varşova Üniversitesi</td>
+                  <td><abbr class="country-code" title="Polonya">PL</abbr></td>
+                  <td>2 öğrenci</td>
+                  <td>1 dönem</td>
+                  <td class="deadline">15 Mar</td>
+                </tr>
+                <tr>
+                  <td>Charles University Prag</td>
+                  <td><abbr class="country-code" title="Çekya">CZ</abbr></td>
+                  <td>2 öğrenci</td>
+                  <td>1 dönem</td>
+                  <td class="deadline">15 Mar</td>
+                </tr>
+                <tr>
+                  <td>Ljubljana Üniversitesi</td>
+                  <td><abbr class="country-code" title="Slovenya">SI</abbr></td>
+                  <td>1 öğrenci</td>
+                  <td>1 dönem</td>
+                  <td class="deadline">15 Mar</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════
+         5. STAJ
+    ══════════════════════════════ -->
+      <section id="internship" class="page" aria-label="Staj programı">
+        <div class="wrap sec">
+          <span class="lbl">Kariyer Yolu</span>
+
+          <figure class="page-hero-img staj-img">
+            <img
+              src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1400&q=85"
+              alt="Profesyonel bir ofis ortamında takım halinde çalışan yazılım geliştiricileri"
+            />
+            <figcaption>Staj &amp; Endüstri Yerleşimi</figcaption>
+          </figure>
+
+          <div class="stat-cards" aria-label="Staj istatistikleri">
+            <article class="stat-card">
+              <p class="stat-card-label">Minimum Süre</p>
+              <strong class="stat-card-num">60</strong>
+              <p class="stat-card-sub">iş günü</p>
+            </article>
+            <article class="stat-card">
+              <p class="stat-card-label">Ortak Şirket</p>
+              <strong class="stat-card-num">34+</strong>
+              <p class="stat-card-sub">aktif MoU anlaşması</p>
+            </article>
+            <article class="stat-card">
+              <p class="stat-card-label">İstihdam Oranı</p>
+              <strong class="stat-card-num">%91</strong>
+              <p class="stat-card-sub">geri dönüş teklifi alıyor</p>
+            </article>
+          </div>
+
+          <div class="staj-cols">
+            <div>
+              <h2 class="h2" style="font-size: 20px">Başvurmadan Önce</h2>
+              <p style="font-size: 13px; color: var(--muted)">
+                Staj koordinatörüne iletmeden önce tüm maddeleri tamamlayın.
+              </p>
+              <ul class="checklist">
+                <li>
+                  CV'nizi hedef role göre özelleştirin — tek sayfa, fotoğraf yok
+                </li>
+                <li>
+                  Herkese açık GitHub reposu olan en az bir API projesi
+                  geliştirin
+                </li>
+                <li>
+                  Portföy README dosyasını mimari kararlarınızı açıklayarak
+                  tamamlayın
+                </li>
+                <li>Kayıt ofisinden GPA belgesi alın (min 2.50/4.00)</li>
+                <li>Bölüm onay formunu akademik danışmanınıza imzalatın</li>
+                <li>SGK kaydınızın aktif olduğunu doğrulayın</li>
+                <li>
+                  Her şirket için özgün bir ön yazı hazırlayın (max 300 kelime)
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 class="h2" style="font-size: 20px">Önemli Tarihler</h2>
+              <p style="font-size: 13px; color: var(--muted)">
+                2025–2026 Akademik Yılı
+              </p>
+              <dl class="dates-list">
+                <div class="date-row">
+                  <dt class="date-value">15 Oca 2026</dt>
+                  <dd class="date-desc">Yaz stajları başvuru portalı açılır</dd>
+                </div>
+                <div class="date-row">
+                  <dt class="date-value">01 Mar 2026</dt>
+                  <dd class="date-desc">
+                    Şirket onay formları son teslim tarihi
+                  </dd>
+                </div>
+                <div class="date-row">
+                  <dt class="date-value">09 Haz 2026</dt>
+                  <dd class="date-desc">En erken staj başlangıç tarihi</dd>
+                </div>
+                <div class="date-row">
+                  <dt class="date-value">28 Ağu 2026</dt>
+                  <dd class="date-desc">En geç staj bitiş tarihi</dd>
+                </div>
+                <div class="date-row">
+                  <dt class="date-value">20 Eyl 2026</dt>
+                  <dd class="date-desc">
+                    Staj raporu ve işveren değerlendirmesi teslimi
+                  </dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════
+         6. ÇAP
+    ══════════════════════════════ -->
+      <section id="double" class="page" aria-label="Çift anadal programı">
+        <div class="wrap sec">
+          <span class="lbl">Çift Diploma</span>
+          <h1 class="h1">Çift Anadal Programı (ÇAP)</h1>
+          <p class="sub" style="margin-bottom: 44px">
+            Mezuniyet sürenizi uzatmadan iki farklı alanda uzmanlaşın.
+          </p>
+          <div class="cap-cards">
+            <article class="cap-card">
+              <span class="chip chip-blue" style="margin-bottom: 14px"
+                >Başvuru Koşulları</span
+              >
+              <h2
+                style="
+                  font-size: 19px;
+                  font-weight: 800;
+                  color: var(--dark);
+                  margin-bottom: 4px;
+                "
+              >
+                Uygunluk Kriterleri
+              </h2>
+              <strong class="cap-gpa">GPA ≥ 3.00</strong>
+              <ul class="cap-list">
+                <li>Ana programda en az 2 dönem tamamlanmış olmalı</li>
+                <li>
+                  Hiçbir çekirdek mühendislik dersinde başarısızlık bulunmamalı
+                </li>
+                <li>Her iki bölüm başkanından yazılı onay alınmalı</li>
+                <li>Toplam program kredisi 270 AKTS'yi geçmemeli</li>
+                <li>İngilizce yeterlilik: B2 veya üzeri</li>
+                <li>Başvuru 3. Sömestr sonundan önce yapılmalı</li>
+                <li>Akademik danışman onaylı sömestr yük planı gerekli</li>
+              </ul>
+            </article>
+            <article class="cap-card">
+              <span class="chip chip-blue" style="margin-bottom: 14px"
+                >Popüler Kombinasyonlar</span
+              >
+              <h2
+                style="
+                  font-size: 19px;
+                  font-weight: 800;
+                  color: var(--dark);
+                  margin-bottom: 4px;
+                "
+              >
+                Önerilen İkili Programlar
+              </h2>
+              <p
+                style="
+                  font-size: 13px;
+                  color: var(--muted);
+                  margin-bottom: 20px;
+                "
+              >
+                YM çekirdek müfredatıyla en yüksek sinerjiyi sağlayan
+                kombinasyonlar.
+              </p>
+              <ul class="cap-list">
+                <li>Yazılım Müh. + Matematik (YZ/ML izlemek için ideal)</li>
+                <li>
+                  Yazılım Müh. + Endüstri Müh. (operasyon araştırması, lojistik)
+                </li>
+                <li>
+                  Yazılım Müh. + İşletme (ürün yönetimi ve startup izleri)
+                </li>
+                <li>
+                  Yazılım Müh. + Elektrik-Elektronik Müh. (gömülü sistemler,
+                  IoT)
+                </li>
+                <li>
+                  Yazılım Müh. + İstatistik (veri bilimi, nicel araştırma)
+                </li>
+                <li>Yazılım Müh. + Bilgi Sistemleri (kurumsal mimari)</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════
+         7. ARAŞTIRMA & PROJELER
+    ══════════════════════════════ -->
+      <section id="research" class="page" aria-label="Araştırma ve projeler">
+        <div class="wrap sec">
+          <span class="lbl">Çıktı ve İnovasyon</span>
+
+          <figure class="page-hero-img res-img">
+            <img
+              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1400&q=85"
+              alt="Veri analitiği gösterge panoları ve kod editörü açık ekranlardan oluşan bir araştırma ortamı"
+            />
+            <figcaption>Araştırma &amp; Projeler</figcaption>
+          </figure>
+
+          <p class="sub" style="margin-bottom: 36px">
+            Yayınlanan, dağıtılan ve atıf alan öğrenci ve öğretim üyesi
+            çalışmaları.
+          </p>
+
+          <ul class="project-grid" role="list">
+            <li class="project-card">
+              <div class="project-thumb" aria-hidden="true">
+                <div class="project-thumb-grid"></div>
+                <span class="project-icon">◈</span>
+              </div>
+              <div class="project-body">
+                <h3 class="project-title">Küresel EV Pazar Analiz Panosu</h3>
+                <ul
+                  class="stack-wrap"
+                  role="list"
+                  aria-label="Kullanılan teknolojiler"
+                >
+                  <li class="stack-pill">[Power BI]</li>
+                  <li class="stack-pill">[Python]</li>
+                  <li class="stack-pill">[Azure Data Factory]</li>
+                </ul>
+              </div>
+            </li>
+            <li class="project-card">
+              <div class="project-thumb" aria-hidden="true">
+                <div class="project-thumb-grid"></div>
+                <span class="project-icon">⬡</span>
+              </div>
+              <div class="project-body">
+                <h3 class="project-title">
+                  Üniversite Çamaşırhane Randevu Sistemi
+                </h3>
+                <ul
+                  class="stack-wrap"
+                  role="list"
+                  aria-label="Kullanılan teknolojiler"
+                >
+                  <li class="stack-pill">[ASP.NET Core]</li>
+                  <li class="stack-pill">[PostgreSQL]</li>
+                  <li class="stack-pill">[React]</li>
+                </ul>
+              </div>
+            </li>
+            <li class="project-card">
+              <div class="project-thumb" aria-hidden="true">
+                <div class="project-thumb-grid"></div>
+                <span class="project-icon">⬟</span>
+              </div>
+              <div class="project-body">
+                <h3 class="project-title">
+                  REST API Hız Sınırlayıcı ve Analitik Takip
+                </h3>
+                <ul
+                  class="stack-wrap"
+                  role="list"
+                  aria-label="Kullanılan teknolojiler"
+                >
+                  <li class="stack-pill">[Node.js]</li>
+                  <li class="stack-pill">[Redis]</li>
+                  <li class="stack-pill">[Grafana]</li>
+                </ul>
+              </div>
+            </li>
+            <li class="project-card">
+              <div class="project-thumb" aria-hidden="true">
+                <div class="project-thumb-grid"></div>
+                <span class="project-icon">◉</span>
+              </div>
+              <div class="project-body">
+                <h3 class="project-title">
+                  Gerçek Zamanlı Toplu Taşıma Anomali Dedektörü
+                </h3>
+                <ul
+                  class="stack-wrap"
+                  role="list"
+                  aria-label="Kullanılan teknolojiler"
+                >
+                  <li class="stack-pill">[ASP.NET Core]</li>
+                  <li class="stack-pill">[Azure Event Hub]</li>
+                  <li class="stack-pill">[ML.NET]</li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════
+         8. ÖĞRENCİ HAYATI
+    ══════════════════════════════ -->
+      <section id="student" class="page" aria-label="Öğrenci hayatı">
+        <div class="wrap sec">
+          <span class="lbl">Topluluk</span>
+          <h1 class="h1">Öğrenci Hayatı</h1>
+          <p class="sub" style="margin-bottom: 36px">
+            Hackathonlar, GDG, Unides ve sizi siz yapan insanlar.
+          </p>
+
+          <ul
+            class="photo-gallery"
+            role="list"
+            aria-label="Öğrenci etkinlikleri fotoğraf galerisi"
+          >
+            <li class="gallery-item">
+              <span class="gallery-tag">ETKİNLİK</span>
+              <img
+                src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=900&q=80"
+                alt="Öğrenciler bahar hackathonunda 48 saatlik sprint sırasında bilgisayar başında çalışıyor"
+              />
+              <p class="gallery-caption">
+                Bahar Hackathonu — 48 saatlik sprint
+              </p>
+            </li>
+            <li class="gallery-item">
+              <img
+                src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&q=80"
+                alt="Öğrenciler kampüs kütüphanesinde gece geç saatlerde birlikte çalışıyor"
+              />
+              <p class="gallery-caption">Güçlü kahve, geç saatler</p>
+            </li>
+            <li class="gallery-item">
+              <span class="gallery-tag">GDG</span>
+              <img
+                src="https://images.unsplash.com/photo-1558403194-611308249627?w=700&q=80"
+                alt="Google Developer Groups öğrenci topluluğu etkinlik planlama toplantısında masada oturuyor"
+              />
+              <p class="gallery-caption">GDG Planlama Toplantısı</p>
+            </li>
+            <li class="gallery-item">
+              <span class="gallery-tag">UNİDES</span>
+              <img
+                src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1000&q=80"
+                alt="Unides ulusal üniversiteler arası yazılım etkinliği sunum ve koordinasyon toplantısı"
+              />
+              <p class="gallery-caption">
+                Unides Ulusal Etkinlik Koordinasyonu
+              </p>
+            </li>
+            <li class="gallery-item">
+              <img
+                src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=900&q=80"
+                alt="Sektör uzmanları öğrencilere konferans salonunda atölye semineri veriyor"
+              />
+              <p class="gallery-caption">Endüstri Atölye Serisi</p>
+            </li>
+            <li class="gallery-item">
+              <img
+                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=900&q=80"
+                alt="Bitirme projesi öğrenci ekibi son sprint değerlendirme toplantısını yapıyor"
+              />
+              <p class="gallery-caption">Bitirme projesi retrospektifi</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════
+         9. KAMPÜSLER
+    ══════════════════════════════ -->
+      <section id="campuses" class="page" aria-label="Kampüsler">
+        <article class="campus-band" aria-label="Ballıca teknik kampüsü">
+          <div
+            class="campus-bg"
+            role="img"
+            aria-label="Yeşil alanlar ve mühendislik binaları ile Ballıca kampüsü manzarası"
+          ></div>
+          <div class="campus-content">
+            <div class="campus-inner">
+              <p class="campus-location">// Ballıca · 19 Mayıs, Samsun</p>
+              <h2 class="campus-title">Ballıca Teknik Kampüsü</h2>
+              <p class="campus-desc">
+                Eski Tekel Tütün Fabrikası alanı üzerine kurulan Ballıca
+                Kampüsü; Mühendislik Fakültesi, havacılık hangarları ve
+                TEKNOFEST atölyeleriyle Samsun'un teknoloji üssüdür.
+              </p>
+              <dl class="campus-stats">
+                <div>
+                  <dt class="campus-stat-num">12</dt>
+                  <dd class="campus-stat-lbl">Laboratuvar</dd>
+                </div>
+                <div>
+                  <dt class="campus-stat-num">3</dt>
+                  <dd class="campus-stat-lbl">Araştırma Merkezi</dd>
+                </div>
+                <div>
+                  <dt class="campus-stat-num">850</dt>
+                  <dd class="campus-stat-lbl">Öğrenci</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </article>
+
+        <article class="campus-band" aria-label="Canik şehir tesisleri">
+          <div
+            class="campus-bg"
+            role="img"
+            aria-label="Modern binalarıyla şehir merkezindeki Canik kampüsü manzarası"
+          ></div>
+          <div class="campus-content">
+            <div class="campus-inner">
+              <p class="campus-location">// Canik · Gürgenyatağı, Samsun</p>
+              <h2 class="campus-title">Canik Şehir Tesisleri</h2>
+              <p class="campus-desc">
+                Canik ilçesinde modern binalarda yer alan kampüs; yazılım
+                mühendisliği, veri bilimi ve lisansüstü programlarına ev
+                sahipliği yapıyor. Endüstri ortakları ve şehrin teknoloji
+                merkezine yakın.
+              </p>
+              <dl class="campus-stats">
+                <div>
+                  <dt class="campus-stat-num">8</dt>
+                  <dd class="campus-stat-lbl">Laboratuvar</dd>
+                </div>
+                <div>
+                  <dt class="campus-stat-num">2</dt>
+                  <dd class="campus-stat-lbl">Kuluçka Merkezi</dd>
+                </div>
+                <div>
+                  <dt class="campus-stat-num">600</dt>
+                  <dd class="campus-stat-lbl">Öğrenci</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- ══════════════════════════════
+         10. İLETİŞİM
+    ══════════════════════════════ -->
+      <section id="contact" class="page" aria-label="İletişim">
+        <div class="wrap sec">
+          <span class="lbl">İletişim</span>
+          <h1 class="h1" style="margin-bottom: 44px">Bize Ulaşın</h1>
+
+          <div class="contact-grid">
+            <div>
+              <p style="font-size: 15px; color: var(--muted); line-height: 1.8">
+                Bölümümüz hakkındaki sorularınız için aşağıdaki kanalları
+                kullanabilirsiniz. İş günleri içinde yanıt veriyoruz.
+              </p>
+
+              <address class="contact-details-list">
+                <div class="contact-detail-item">
+                  <span class="contact-badge">ADRES</span>
+                  <div class="contact-detail-text">
+                    <strong>Ballıca Kampüsü</strong>
+                    Samsun Üniversitesi Mühendislik Fakültesi<br />
+                    İstiklal Mh. Tekel Cd. 55420, 19 Mayıs, Samsun
+                  </div>
+                </div>
+                <div class="contact-detail-item">
+                  <span class="contact-badge">E-POSTA</span>
+                  <div class="contact-detail-text">
+                    <strong>Öğrenci İşleri</strong>
+                    <a href="mailto:yazilim@samsun.edu.tr"
+                      >yazilim@samsun.edu.tr</a
+                    >
+                  </div>
+                </div>
+                <div class="contact-detail-item">
+                  <span class="contact-badge">E-POSTA</span>
+                  <div class="contact-detail-text">
+                    <strong>Akademik Birim</strong>
+                    <a href="mailto:yazilim.akademik@samsun.edu.tr"
+                      >yazilim.akademik@samsun.edu.tr</a
+                    >
+                  </div>
+                </div>
+                <div class="contact-detail-item">
+                  <span class="contact-badge">TEL</span>
+                  <div class="contact-detail-text">
+                    <strong>Bölüm Sekreterliği</strong>
+                    <a href="tel:+903624576000">+90 362 457 60 00</a> / Dahili:
+                    4210
+                  </div>
+                </div>
+              </address>
+
+              <div class="map-frame">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3005.1!2d36.2!3d41.55!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDMzJzAwLjAiTiAzNsKwMTInMDAuMCJF!5e0!3m2!1str!2str!4v1"
+                  title="Samsun Üniversitesi Ballıca Kampüsü haritası"
+                  allowfullscreen
+                  loading="lazy"
+                ></iframe>
+              </div>
+            </div>
+
+            <div class="form-card">
+              <h2>Mesaj Gönder</h2>
+              <form id="contact-form" novalidate>
+                <div class="form-group">
+                  <label for="name">Ad Soyad</label>
+                  <input
+                    id="name"
+                    type="text"
+                    name="name"
+                    placeholder="Ada Lovelace"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="email">E-posta Adresi</label>
+                  <input
+                    id="email"
+                    type="email"
+                    name="email"
+                    placeholder="ada@ornek.com"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="subject">Konu</label>
+                  <select id="subject" name="subject" required>
+                    <option value="">Bir konu seçin</option>
+                    <option>Kabul ve Kayıt</option>
+                    <option>Erasmus Programı</option>
+                    <option>Staj Bilgileri</option>
+                    <option>Akademik İşler</option>
+                    <option>Diğer</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="message">Mesajınız</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Mesajınızı buraya yazın…"
+                    required
+                  ></textarea>
+                </div>
+                <button type="submit" class="btn-primary">Gönder</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p class="footer-brand">YM<span>.</span>SAMSUN</p>
+      <p>
+        © 2025 Yazılım Mühendisliği Bölümü — Samsun Üniversitesi Mühendislik ve
+        Doğa Bilimleri Fakültesi
+      </p>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
